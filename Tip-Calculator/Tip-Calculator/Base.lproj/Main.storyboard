@@ -33,6 +33,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byc-wJ-Oqq">
                                 <rect key="frame" x="155" y="318" width="64" height="30"/>
                                 <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bA5-r1-RSH"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6JD-rk-h6Z">
                                 <rect key="frame" x="58" y="86" width="275" height="163"/>
@@ -139,7 +142,9 @@
                     </view>
                     <connections>
                         <outlet property="billAmountField" destination="xBv-g4-TiQ" id="3g3-fq-xxY"/>
+                        <outlet property="tipAmountField" destination="Qyf-NQ-SQf" id="ExO-HN-KM8"/>
                         <outlet property="tipSelector" destination="9p4-g8-BUR" id="Kdb-K7-7ia"/>
+                        <outlet property="totalAnountField" destination="eFz-Zb-w9P" id="012-Mv-r6S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
