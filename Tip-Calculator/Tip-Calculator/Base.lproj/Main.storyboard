@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,18 +22,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Calculator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBI-zI-b07">
-                                <rect key="frame" x="128" y="28" width="118" height="20.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="118" id="1LN-Lx-lAF"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBI-zI-b07">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.093179993331432343" green="0.61171364784240723" blue="0.84475058317184448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byc-wJ-Oqq">
-                                <rect key="frame" x="155" y="318" width="64" height="30"/>
-                                <state key="normal" title="Calculate"/>
+                                <rect key="frame" x="16" y="312" width="343" height="36"/>
+                                <color key="backgroundColor" red="0.093179993331432343" green="0.61171364784240723" blue="0.84475058317184448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="bj6-iA-2dx"/>
+                                    <constraint firstAttribute="height" constant="36" id="jU1-VQ-QS2"/>
+                                </constraints>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bA5-r1-RSH"/>
                                 </connections>
@@ -79,6 +86,7 @@
                                                     <segment title="18%"/>
                                                     <segment title="20%"/>
                                                 </segments>
+                                                <color key="tintColor" red="0.093179993330000002" green="0.61171364780000004" blue="0.84475058319999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </segmentedControl>
                                         </subviews>
                                     </stackView>
@@ -128,16 +136,24 @@
                                     <constraint firstAttribute="height" constant="163" id="eFC-Ot-vrY"/>
                                 </constraints>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="VOO-4Y-vYH">
+                                <rect key="frame" x="67" y="356" width="240" height="239"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="byc-wJ-Oqq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="65L-7R-CL1"/>
+                            <constraint firstItem="byc-wJ-Oqq" firstAttribute="top" secondItem="6JD-rk-h6Z" secondAttribute="bottom" constant="63" id="4Za-fA-D1D"/>
+                            <constraint firstItem="byc-wJ-Oqq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-3.5" id="65L-7R-CL1"/>
                             <constraint firstAttribute="trailing" secondItem="6JD-rk-h6Z" secondAttribute="trailing" constant="42" id="82x-LJ-zig"/>
-                            <constraint firstItem="SBI-zI-b07" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8J0-8I-Exu"/>
-                            <constraint firstItem="SBI-zI-b07" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Rim-yI-apg"/>
+                            <constraint firstItem="SBI-zI-b07" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ClS-xd-Cmx"/>
+                            <constraint firstAttribute="trailing" secondItem="SBI-zI-b07" secondAttribute="trailing" id="IPy-vf-Ws2"/>
+                            <constraint firstItem="SBI-zI-b07" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aAw-LW-goc"/>
                             <constraint firstItem="6JD-rk-h6Z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="58" id="cBc-VE-Blj"/>
-                            <constraint firstItem="6JD-rk-h6Z" firstAttribute="top" secondItem="SBI-zI-b07" secondAttribute="bottom" constant="37.5" id="fa5-Sq-7UD"/>
-                            <constraint firstItem="SBI-zI-b07" firstAttribute="centerX" secondItem="byc-wJ-Oqq" secondAttribute="centerX" id="wWF-iQ-ICP"/>
+                            <constraint firstItem="SBI-zI-b07" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cmP-kF-Hgs"/>
+                            <constraint firstAttribute="trailing" secondItem="SBI-zI-b07" secondAttribute="trailing" id="i48-eU-SxE"/>
+                            <constraint firstItem="6JD-rk-h6Z" firstAttribute="top" secondItem="SBI-zI-b07" secondAttribute="bottom" constant="26" id="jAu-So-HKs"/>
+                            <constraint firstItem="byc-wJ-Oqq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lf3-Ik-8Qj"/>
                         </constraints>
                     </view>
                     <connections>
@@ -152,4 +168,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="450" height="450"/>
+    </resources>
 </document>
